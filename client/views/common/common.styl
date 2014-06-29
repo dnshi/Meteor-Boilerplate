@@ -1,0 +1,32 @@
+@import 'nib'
+
+#iron-router-progress
+  background-color #3EB0C0
+  box-shadow 0 0 5px #884fbf
+
+#iron-router-progress.spinner:before
+  border-color #dfdfdf
+
+body
+  color #eee
+  font-size 16px
+  background-image url("http://subtlepatterns.com/patterns/moulin.png")
+
+ul
+  reset-box-model()
+
+  li
+    list-style-type none
+
+    a
+      padding 2px 0
+      display block
+      color rgba(255,255,255,.7)
+      text-decoration none
+      transition color .25s ease
+
+    a:hover
+      color white
+      text-decoration none
+      text-shadow 0 0 1px #ccc
+      transition color .25s ease

@@ -1,0 +1,44 @@
+@import 'nib'
+
+// Mixins
+list-style(_width, _height, _left, _top, _color)
+  absolute top _top left _left bottom
+  content ""
+  width _width
+  height _height
+  border-radius 2px
+  background none repeat scroll 0% 0% _color
+  box-shadow 0 1px 1px rgba(0,0,0,.5) inset, 0 1px 1px rgba(255,255,255,.3)
+
+div#main
+  position relative
+
+  h1
+    small
+      display inline-block
+      color #777
+
+  section.content
+    position relative
+    padding-top 13px
+
+    h3
+      margin 0
+    p,
+    ul
+      padding 10px
+
+    h3,
+    li
+      position relative
+      padding-left 15px
+
+    li
+      padding-bottom 10px
+
+    h3:after
+      list-style(5px, 18px, 0, 4px, #6cf)
+
+    li:after
+      list-style(10px, 6px, -3px, 10px, #f6c)
+

@@ -1,0 +1,16 @@
+template(name="home")
+  div#main.container
+    h1 #{appName}
+      small by Dean Shi
+
+    section.content
+      div.row
+        div.col-sm-6(style="padding-left: 20px")
+          h3 READ ME
+          p(style="height: 300px") Under construction...
+
+        div.col-sm-6
+          h3 PACKAGES INVOLVED
+          ul
+            each packages
+              li: a(href="#{url}") #{name}
