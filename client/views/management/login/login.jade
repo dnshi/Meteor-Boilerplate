@@ -1,5 +1,7 @@
 template(name="login")
-  h1 Hello World!
-  +loginButtons
-  //- +adminTemplate
-  input(type="button", value="Click")
+    h1 Hello World!
+    +loginButtons
+    if currentUser
+        div #{currentUser.username}
+    else
+       div Must be admin to see this...

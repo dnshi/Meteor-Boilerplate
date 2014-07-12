@@ -9,6 +9,10 @@ Router.configure
   onBeforeAction: ->
     console.log("before all")
 
+IronRouterProgress.configure
+  spinner : false
+
+
 # == JS ==
 # Router.configure({
 #   layoutTemplate: "layout",

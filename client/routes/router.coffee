@@ -1,17 +1,14 @@
-IronRouterProgress.configure
-  spinner : false
-
 Router.map ->
   @route "home",
-     path: "/"
-     layoutTemplate: "sampleLayout"
-     yieldTemplates:
-       header:
-         to: "header"
-       footer:
-         to: "footer"
+    path: "/"
+    layoutTemplate: "sampleLayout"
+    yieldTemplates:
+      header:
+        to: "header"
+      footer:
+        to: "footer"
   @route "login",
-     path: "/login"
+    path: "/login"
 
 #  @route "about", path: "about"
 
