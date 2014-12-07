@@ -1,16 +1,27 @@
 Router.configure
   layoutTemplate: "layout"
   notFoundTemplate: "notFound"
+  progressSpinner : false
   # yieldTemplates:
   #   header:
   #     to: "header"
   #   footer:
   #     to: "footer"
-  onBeforeAction: ->
-    console.log("before all")
+  onBeforeAction: () ->
+    # no need to check at these URLs
+    # return if _.include ['', ''], this.route.name
 
-IronRouterProgress.configure
-  spinner : false
+    ###############
+    # Disable it
+    ###############
+    # if user is not login
+    # if !Meteor.userId()
+    #   this.render "login"
+    # else
+    #   this.next()
+
+    this.next()
+    console.log "before all"
 
 
 # == JS ==
